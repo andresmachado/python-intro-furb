@@ -1,0 +1,746 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 18 21:40:48 2017
+
+@author: andre
+"""
+
+IPython 5.2.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+In [1]: a = " Ola 'Mundo' "
+In [1]: a = " Ola 'Mundo' "
+
+In [2]: a
+Out[2]: " Ola 'Mundo' "
+
+In [3]: a[0]
+Out[3]: ' '
+
+In [4]: a = "FURB"
+
+In [5]: a[0]
+Out[5]: 'F'
+
+In [6]: a[0] = "B"
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-6-f2ec0d27eb5e> in <module>()
+----> 1 a[0] = "B"
+
+TypeError: 'str' object does not support item assignment
+
+In [7]: a_string = 'Python is a beautiful programming language'
+
+In [8]: a_string
+Out[8]: 'Python is a beautiful programming language'
+
+In [9]: len(a_string)
+Out[9]: 42
+
+In [10]: len(a_string) > len(a)
+Out[10]: True
+
+In [11]: resultado = len(a_string) > len(a)
+
+In [12]: resultado
+Out[12]: True
+In [13]: a_string[5:20]
+In [13]: a_string[5:20]
+Out[13]: 'n is a beautifu'
+
+In [14]: a_string[5:len(a_string) -1:2]
+Out[14]: 'ni  euiu rgamn aga'
+
+In [15]: a_string
+Out[15]: 'Python is a beautiful programming language'
+
+In [16]: a[0]
+Out[16]: 'F'
+
+In [17]: a_string[0] == a[0]
+Out[17]: False
+
+In [18]: a
+Out[18]: 'FURB'
+
+In [19]: a_string
+Out[19]: 'Python is a beautiful programming language'
+
+In [20]: a_string[:-1]
+Out[20]: 'Python is a beautiful programming languag'
+
+In [21]: a_string[:-10]
+Out[21]: 'Python is a beautiful programmin'
+
+In [22]: a_string[::-1]
+Out[22]: 'egaugnal gnimmargorp lufituaeb a si nohtyP'
+
+In [23]: a_string
+Out[23]: 'Python is a beautiful programming language'
+
+In [24]: s_inverted = a_string[::-1]
+
+In [25]: s_inverted
+Out[25]: 'egaugnal gnimmargorp lufituaeb a si nohtyP'
+
+In [26]: a
+Out[26]: 'FURB'
+
+In [27]: b = a
+
+In [28]: a
+Out[28]: 'FURB'
+
+In [29]: b
+Out[29]: 'FURB'
+
+In [30]: b = a[:]
+
+In [31]: b
+Out[31]: 'FURB'
+
+In [32]: id(b)
+Out[32]: 4585719872
+
+In [33]: id(a)
+Out[33]: 4585719872
+In [34]: help(a)
+In [34]: help(a)
+no Python documentation found for 'FURB'
+
+
+In [35]: dir(a)
+Out[35]:
+['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getnewargs__',
+ '__getslice__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mod__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rmod__',
+ '__rmul__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '_formatter_field_name_split',
+ '_formatter_parser',
+ 'capitalize',
+ 'center',
+ 'count',
+ 'decode',
+ 'encode',
+ 'endswith',
+ 'expandtabs',
+ 'find',
+ 'format',
+ 'index',
+ 'isalnum',
+ 'isalpha',
+ 'isdigit',
+ 'islower',
+ 'isspace',
+ 'istitle',
+ 'isupper',
+ 'join',
+ 'ljust',
+ 'lower',
+ 'lstrip',
+ 'partition',
+ 'replace',
+ 'rfind',
+ 'rindex',
+ 'rjust',
+ 'rpartition',
+ 'rsplit',
+ 'rstrip',
+ 'split',
+ 'splitlines',
+ 'startswith',
+ 'strip',
+ 'swapcase',
+ 'title',
+ 'translate',
+ 'upper',
+ 'zfill']
+
+In [36]: a.upper()
+Out[36]: 'FURB'
+
+In [37]: a = 'furb'
+
+In [38]: a
+Out[38]: 'furb'
+
+In [39]: a.upper()
+Out[39]: 'FURB'
+
+In [40]: a.swapcase()
+Out[40]: 'FURB'
+
+In [41]: a.title()
+Out[41]: 'Furb'
+
+In [42]: a_string
+Out[42]: 'Python is a beautiful programming language'
+
+In [43]: a_string = "      amosidopsidjpo   aposijpaoisjdoi      .lll  "
+
+In [44]: a
+Out[44]: 'furb'
+
+In [45]: a_string
+Out[45]: '      amosidopsidjpo   aposijpaoisjdoi      .lll  '
+
+In [46]: a_string.strip()
+Out[46]: 'amosidopsidjpo   aposijpaoisjdoi      .lll'
+
+In [47]: a_string
+Out[47]: '      amosidopsidjpo   aposijpaoisjdoi      .lll  '
+
+In [48]: a_string.split()
+Out[48]: ['amosidopsidjpo', 'aposijpaoisjdoi', '.lll']
+
+In [49]: 'maca banana melao abacaxi'.split()
+Out[49]: ['maca', 'banana', 'melao', 'abacaxi']
+In [50]: list()
+In [50]: list()
+Out[50]: []
+
+In [51]: a = list()
+
+In [52]: a
+Out[52]: []
+
+In [53]: a.append(10)
+
+In [54]: a
+Out[54]: [10]
+
+In [55]: list(a_string)
+Out[55]:
+[' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ 'a',
+ 'm',
+ 'o',
+ 's',
+ 'i',
+ 'd',
+ 'o',
+ 'p',
+ 's',
+ 'i',
+ 'd',
+ 'j',
+ 'p',
+ 'o',
+ ' ',
+ ' ',
+ ' ',
+ 'a',
+ 'p',
+ 'o',
+ 's',
+ 'i',
+ 'j',
+ 'p',
+ 'a',
+ 'o',
+ 'i',
+ 's',
+ 'j',
+ 'd',
+ 'o',
+ 'i',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ '.',
+ 'l',
+ 'l',
+ 'l',
+ ' ',
+ ' ']
+
+In [56]: a_string
+Out[56]: '      amosidopsidjpo   aposijpaoisjdoi      .lll  '
+
+In [57]: list(a_string)
+Out[57]:
+[' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ 'a',
+ 'm',
+ 'o',
+ 's',
+ 'i',
+ 'd',
+ 'o',
+ 'p',
+ 's',
+ 'i',
+ 'd',
+ 'j',
+ 'p',
+ 'o',
+ ' ',
+ ' ',
+ ' ',
+ 'a',
+ 'p',
+ 'o',
+ 's',
+ 'i',
+ 'j',
+ 'p',
+ 'a',
+ 'o',
+ 'i',
+ 's',
+ 'j',
+ 'd',
+ 'o',
+ 'i',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ ' ',
+ '.',
+ 'l',
+ 'l',
+ 'l',
+ ' ',
+ ' ']
+
+In [58]: len(list(a_string))
+Out[58]: 50
+
+In [59]: for i in list(a_string): print(i)
+
+
+
+
+
+
+a
+m
+o
+s
+i
+d
+o
+p
+s
+i
+d
+j
+p
+o
+
+
+
+a
+p
+o
+s
+i
+j
+p
+a
+o
+i
+s
+j
+d
+o
+i
+
+
+
+
+
+
+.
+l
+l
+l
+
+
+
+In [60]: 'a' + 'b'
+Out[60]: 'ab'
+
+In [61]: 10 + 'a'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-61-fcbf228db78d> in <module>()
+----> 1 10 + 'a'
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+In [62]: for i in list(a_string):print(i)
+In [62]: for i in list(a_string):print(i)
+
+
+
+
+
+
+a
+m
+o
+s
+i
+d
+o
+p
+s
+i
+d
+j
+p
+o
+
+
+
+a
+p
+o
+s
+i
+j
+p
+a
+o
+i
+s
+j
+d
+o
+i
+
+
+
+
+
+
+.
+l
+l
+l
+
+
+
+In [63]: for i in list(a_string): print(i)
+
+
+
+
+
+
+a
+m
+o
+s
+i
+d
+o
+p
+s
+i
+d
+j
+p
+o
+
+
+
+a
+p
+o
+s
+i
+j
+p
+a
+o
+i
+s
+j
+d
+o
+i
+
+
+
+
+
+
+.
+l
+l
+l
+
+
+
+In [64]: for i in list(a_string):
+    ...:     print(i),,,,,
+  File "<ipython-input-64-15f6a944d7fd>", line 2
+    print(i),,,,,
+             ^
+SyntaxError: invalid syntax
+
+
+In [65]: for i in list(a_string): print(i)
+
+
+
+
+
+
+a
+m
+o
+s
+i
+d
+o
+p
+s
+i
+d
+j
+p
+o
+
+
+
+a
+p
+o
+s
+i
+j
+p
+a
+o
+i
+s
+j
+d
+o
+i
+
+
+
+
+
+
+.
+l
+l
+l
+
+
+In [66]: help(a)
+
+Help on list object:
+
+class list(object)
+
+
+
+
+
+
+
+In [66]: help(a)
+
+
+In [67]: a
+Out[67]: [10]
+
+In [68]: help(a)
+
+
+In [69]: 'a' + 'b'
+Out[69]: 'ab'
+
+In [70]: ('a').__add__('b')
+Out[70]: 'ab'
+
+In [71]: '{:.5}'.format
+Out[71]: <function format>
+
+In [72]: '{:.5}'.format(a_string)
+Out[72]: '     '
+
+In [73]: a_string = 'Python is a beautiful language.'
+
+In [74]: '{:.5}'.format(a_string)
+Out[74]: 'Pytho'
+
+In [75]: '{:.10}'.format(a_string)
+Out[75]: 'Python is '
+
+In [76]: '{}'.format(a_string[:10])
+Out[76]: 'Python is '
+In [77]: '{}'.format(a_string[:10])
+In [77]: '{}'.format(a_string[:10])
+Out[77]: 'Python is '
+
+In [78]: a_string
+Out[78]: 'Python is a beautiful language.'
+
+In [79]: '{:.10}'.format(a_string)
+Out[79]: 'Python is '
+
+In [80]: '{:.5}'.format(a_string)
+Out[80]: 'Pytho'
+
+In [81]: '{:.1}'.format(a_string)
+Out[81]: 'P'
+In [82]: a_list = 'aaa aaaa aaaaa'.split()
+In [82]: a_list = 'aaa aaaa aaaaa'.split()
+
+In [83]: a_list
+Out[83]: ['aaa', 'aaaa', 'aaaaa']
+
+In [84]: sorted(a_list)
+Out[84]: ['aaa', 'aaaa', 'aaaaa']
+
+In [85]: a_list = 'aaaaaa aaa a'.split()
+
+In [86]: a_list
+Out[86]: ['aaaaaa', 'aaa', 'a']
+
+In [87]: sorted(a_list)
+Out[87]: ['a', 'aaa', 'aaaaaa']
+
+In [88]: a_list
+Out[88]: ['aaaaaa', 'aaa', 'a']
+
+In [89]: a_list = 'bc, xyz, ayd, edc'.split(',')
+
+In [90]: a_list_
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-90-434aea51f7c2> in <module>()
+----> 1 a_list_
+
+NameError: name 'a_list_' is not defined
+
+In [91]: a_list
+Out[91]: ['bc', ' xyz', ' ayd', ' edc']
+
+In [92]: a_list = 'bc,xyz,ayd,edc'.split(',')
+
+In [93]: a_list
+Out[93]: ['bc', 'xyz', 'ayd', 'edc']
+
+In [94]: sorted(a_list)
+Out[94]: ['ayd', 'bc', 'edc', 'xyz']
+
+In [95]: sorted(a_list, key=len)
+Out[95]: ['bc', 'xyz', 'ayd', 'edc']
+
+In [96]: len('abc')
+Out[96]: 3
+
+In [97]: a_list = 'bDDc,AAyz,aaBBaAAyd,AAAedc'.split(',')
+
+In [98]: a_list
+Out[98]: ['bDDc', 'AAyz', 'aaBBaAAyd', 'AAAedc']
+
+In [99]: sorted(a_list, key=str.lower)
+Out[99]: ['AAAedc', 'aaBBaAAyd', 'AAyz', 'bDDc']
+
+In [100]: a_list
+Out[100]: ['bDDc', 'AAyz', 'aaBBaAAyd', 'AAAedc']
+
+In [101]: sorted(a_list, key=str.upper)
+Out[101]: ['AAAedc', 'aaBBaAAyd', 'AAyz', 'bDDc']
+
+In [102]: a_list = '100022233 001112222 01010101 00222'.split(',')
+
+In [103]: a_list
+Out[103]: ['100022233 001112222 01010101 00222']
+
+In [104]: a_list = '100022233 001112222 01010101 00222'.split()
+
+In [105]: a_list
+Out[105]: ['100022233', '001112222', '01010101', '00222']
+
+In [106]: sorted(a_list, key=lambda x: x.count(0))
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-106-d5c5c0b57c08> in <module>()
+----> 1 sorted(a_list, key=lambda x: x.count(0))
+
+<ipython-input-106-d5c5c0b57c08> in <lambda>(x)
+----> 1 sorted(a_list, key=lambda x: x.count(0))
+
+TypeError: expected a string or other character buffer object
+
+In [107]: sorted(a_list, key=lambda x: x.count('0'))
+Out[107]: ['001112222', '00222', '100022233', '01010101']
+
+In [108]: def count_zero(l):
+     ...:     return l.count('0')
+     ...:
+
+In [109]: sorted(a_list, key=count_zero)
+Out[109]: ['001112222', '00222', '100022233', '01010101']
+
+In [110]: sorted(a_list, key=lambda x: x.count('0'))
+Out[110]: ['001112222', '00222', '100022233', '01010101']
+
+In [111]: a_list
+Out[111]: ['100022233', '001112222', '01010101', '00222']
+
+In [112]: sorted(a_list)
+Out[112]: ['001112222', '00222', '01010101', '100022233']
+
+In [113]: a_list.sort()
+
+In [114]: a_list
+Out[114]: ['001112222', '00222', '01010101', '100022233']
+In [115]:
+
+
