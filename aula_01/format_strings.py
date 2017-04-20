@@ -6,7 +6,6 @@ Created on Tue Apr 18 18:35:26 2017
 @author: andre
 """
 from math import pi
-pi = 3.1415
 
 formato_tabela = '{0:^6} | {1:^9} | {2:^10}'
 produtos = [
@@ -37,7 +36,7 @@ a_string.format(cidade='Bruxelas', estação='Inverno')
 print(formato_tabela.format('Qtd.', 'Cor', 'Valor R$'))
 for qtd, cor, valor in produtos:
     print(formato_tabela.format(qtd, cor, valor))
-    
+
 '{0:e} {0:f} {0:%}'.format(.0000031)
 
 format(math.pi, '6.3f')

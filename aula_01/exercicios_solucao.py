@@ -12,12 +12,13 @@
 # e donuts(24) retorna 'Quantidade de donuts: muitos!
 def donuts(count):
     if count < 10:
-        return 'Number of donuts: ' + str(count)
+        return 'Quantidade de donuts: ' + str(count)
     else:
-        return 'Number of donuts: many'
+        return 'Quantidade de donuts: muitos'
 
-donuts(5)
-donuts(10)
+# print(donuts(5))
+# print(donuts(10))
+
 # B. both_ends
 # Dado uma string 's', retorne a string feita os 2 primeiros
 # e os 2 ultimos caracteres da string original.
@@ -30,6 +31,10 @@ def both_ends(s):
   last2 = s[-2:]
   return first2 + last2
 
+# print(both_ends('spring'))
+# print(both_ends('winter'))
+# print(both_ends('summer'))
+# print(both_ends('s'))
 
 # C. fix_start
 # Dado uma string s, retorne uma string aonde todas as
@@ -44,19 +49,26 @@ def fix_start(s):
   fixed_back = back.replace(front, '*')
   return front + fixed_back
 
+# print(fix_start('babble'))
+# print(fix_start('abracadabra'))
+# print(fix_start('alakazam'))
 
 # D. MixUp
 # Dado duas strings, retorne uma unica string com
 # as strings a e b separadas por espaço, trocando os 2 primeiros
 # caracteres de cada string
 # Ex.
-#   'mix', pod' -> 'pox mid'
+#   'mix', 'pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
+  a_swapped = b[:2] + a[2:]
+  b_swapped = a[:2] + b[2:]
+  return a_swapped + ' ' + b_swapped
 
+# print(mix_up('mix', 'pod'))
+# print(mix_up('dog', 'dinner'))
+# print(mix_up('cat', 'fish'))
 
 # A. match_ends
 # Dada uma lista de strings, retorne a contagem de
@@ -64,9 +76,15 @@ def mix_up(a, b):
 # a primeira e o ultimo caracteres sejam os mesmos
 
 def match_ends(words):
-  # +++ seu codigo aqui +++
-  return
+  count = 0
+  for word in words:
+    if len(word) >= 2 and word[0] == word[-1]:
+      count = count + 1
+  return count
 
+# print(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']))
+# print(match_ends(['', 'x', 'xy', 'xyx', 'xx']))
+# print(match_ends(['aaa', 'be', 'abc', 'hello']))
 
 # B. front_x
 # Dado uma lista de strings, retorne uma lista com as
@@ -78,8 +96,17 @@ def match_ends(words):
 # antes de concatena-las
 
 def front_x(words):
-  # +++seu codigo aqui+++
-  return
+  x_list = []
+  other_list = []
+  for w in words:
+    if w[0] == 'x':
+      x_list.append(w)
+    else:
+      other_list.append(w)
+  return sorted(x_list) + sorted(other_list)
+
+# print(front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa']))
+# print(front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']))
 
 
 
