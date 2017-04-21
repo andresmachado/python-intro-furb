@@ -1,3 +1,7 @@
+## Slide da palestra
+
+[Slides - Speakerdeck](https://speakerdeck.com/andresmachado/minicurso-de-python-na-furb-2017)
+
 # Ementa do Curso
 
 * ## Aula 01 - Introdução a linguagem Python
